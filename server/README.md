@@ -4,7 +4,7 @@ A backend service for Plezy. It coordinates Watch Together sessions, receives cl
 
 ## Download
 
-Pull the image from `ghcr.io/edde746/plezy/relay-server`. It supports `amd64` and `arm64`.
+Images are published under the repository owner's GitHub Container Registry namespace: `ghcr.io/<repository-owner>/plezy/relay-server`. The owner is populated from the repository that publishes the image; for the official Plezy image, use `ghcr.io/edde746/plezy/relay-server`. It supports `amd64` and `arm64`.
 
 ## Features
 
@@ -37,7 +37,7 @@ docker run --detach \
   --name plezy-relay \
   --publish 127.0.0.1:8080:8080 \
   --volume plezy-relay-data:/data \
-  ghcr.io/edde746/plezy/relay-server:<version>
+  ghcr.io/<repository-owner>/plezy/relay-server:<version>
 ```
 
 After the container starts, check that the relay is healthy:
